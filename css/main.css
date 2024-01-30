@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+/*------------------------------------------------------
+Header
+------------------------------------------------------*/
+.header {
+  transform: all 0.5s;
+  z-index: 997;
+  padding: 24px 0;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 12px 0;
+  }
+}
+
+.header.sticked {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 12px 0;
+}
+
+.header .logo img {
+  max-height: 40px;
+  margin-right: 6px;
+}
+
+.header .logo h1 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  color: #fff;
+}
+
+/*---------------------------------------------------------
+Hero
