@@ -1,4 +1,4 @@
-[<img alt='hernry kimani' width='28px' src='henry.png' />](https://henry.milimanihighschool.co.ke)# Digi-Arts Portfolio 
+# Digi-Arts Portfolio [<img alt='hernry kimani' width='36px' src='henry.png' />](https://henry.milimanihighschool.co.ke)
 
 Digi-arts specializes in software engineering services, including web development, web design, and SEO. Our expertise includes C++, Java, HTML, CSS, JavaScript, Python (Django, Flask), Tkinter, NLTK. We offer software development, mobile app development, UI/UX design, and more.
 
