@@ -4,6 +4,8 @@ Digi-arts specializes in software engineering services, including web developmen
 
 ## Installation
 
+How to run the project:
+
 1. Clone the repository
     ```bash
     git clone https://github.com/H3nryK/Portfolio.git
