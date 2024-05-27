@@ -1,2 +1,3 @@
 # Portfolio
-A Typescript portfolio that tell more about me.
+
+A Typescript portfolio that tell more about Kimani Henry.
