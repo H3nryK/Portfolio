@@ -1,0 +1,24 @@
+/* src/components/Header.css */
+.navbar-transparent {
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+
+.navbar-colored {
+  background-color: #343a40; /* Change this color as needed */
+  transition: background-color 0.5s ease;
+}
+
+.navbar .nav-link {
+  color: #fff !important; /* Change this color as needed */
+}
+
+.navbar-brand {
+  color: #fff !important; /* Change this color as needed */
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    background-color: #343a40 !important;
+  }
+}
