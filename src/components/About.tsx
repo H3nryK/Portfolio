@@ -7,6 +7,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import './styles/About.css';
 import profilePhoto from './assets/profile.png';
+//hey there 
 
 const About: React.FC = () => {
   return (
