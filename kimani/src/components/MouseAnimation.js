@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './styles/App.css';
 
-const MouseAnimation: React.FC = () => {
+function MouseAnimation() {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const cursor = document.querySelector('.custom-cursor');

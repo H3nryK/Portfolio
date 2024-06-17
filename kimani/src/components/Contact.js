@@ -6,7 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import './styles/Contact.css';
 
-const Contact: React.FC = () => {
+function Contact() {
   return (
     <div id="contact" className="contact-section">
       <Container>

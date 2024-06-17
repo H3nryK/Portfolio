@@ -7,9 +7,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import './styles/About.css';
 import profilePhoto from './assets/profile.png';
-//hey there 
 
-const About: React.FC = () => {
+function About() {
   return (
     <div id="about" className="about-section">
       <Container>

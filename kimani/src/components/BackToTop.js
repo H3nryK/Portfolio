@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import { FaArrowUp } from 'react-icons/fa';
 import './styles/App.css';
 
-const BackToTop: React.FC = () => {
+function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {

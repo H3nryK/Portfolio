@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './styles/App.css';
 
-const Footer: React.FC = () => {
+function Footer() {
   return (
     <footer className="footer-section">
       <Container>

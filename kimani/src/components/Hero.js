@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-const Hero: React.FC = () => {
+function Hero() {
   return (
     <div className="hero-section text-center text-white d-flex align-items-center">
       <div className="overlay"></div>

@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './styles/App.css';
 
-const NotFound: React.FC = () => {
+function NotFound() {
   return (
     <div className="not-found-section">
       <Container>

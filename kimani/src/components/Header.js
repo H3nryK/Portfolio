@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import './styles/Header.css';
 
-const Header: React.FC = () => {
+function Header() {
   const [navbarColor, setNavbarColor] = useState('navbar-transparent');
 
   const changeNavbarColor = () => {
