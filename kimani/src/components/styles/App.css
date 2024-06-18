@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
-  font-family: 'Dancing Script', cursive;
+  font-family: "PT Serif", serif;
   background-color: #f8f9fa;
   color: #343a40;
   margin: 0;
@@ -9,7 +9,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Dancing Script', cursive;
+  font-family: "PT Serif", serif;
+  font-weight: 700;
 }
 
 .container {
@@ -19,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-section {
-    background: url('../assets/hero.jpg') no-repeat center center;
+    background: url('../assets/henry.jpg') no-repeat top center;
     background-size: cover;
     height: 100vh;
     display: flex;

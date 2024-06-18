@@ -1,6 +1,17 @@
 /* styles/About.css */
 .about-section {
   padding: 60px 0;
+  perspective: 1000px; /* Define the perspective for 3D effects */
+}
+
+.about-photo img, .about-text, .about-social {
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-photo img:hover {
+  transform: rotateY(20deg) rotateY(10deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 .about-photo {

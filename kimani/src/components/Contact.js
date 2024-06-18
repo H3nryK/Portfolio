@@ -10,7 +10,7 @@ function Contact() {
   return (
     <div id="contact" className="contact-section">
       <Container>
-        <h2 className="animate__animated animate__fadeInDown">Contact Me</h2>
+        <h2 className="animate__animated animate__fadeInDown text-center">Contact Me</h2>
         <Row>
           <Col md={6} className="animate__animated animate__fadeInLeft contact-details">
             <h4>Contact Details</h4>
