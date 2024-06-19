@@ -1,48 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import './styles/Header.css';
+import React, { useState } from 'react';
+import './styles/Header.css'; // Import custom CSS for additional styling
 
 function Header() {
-  const [navbarColor, setNavbarColor] = useState('navbar-transparent');
+  const [active, setActive] = useState('nav__menu');
+  const [toggleIcon, setToggleIcon] = useState('nav__toggler');
 
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
-      setNavbarColor('navbar-colored');
-    } else {
-      setNavbarColor('navbar-transparent');
-    }
-  };
+  const navToggle = () => {
+    active === "nav__menu"
+      ? setActive("nav__menu nav__active")
+      : setActive("nav__menu");
 
-  useEffect(() => {
-    window.addEventListener('scroll', changeNavbarColor);
-    return () => {
-      window.removeEventListener('scroll', changeNavbarColor);
-    };
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-  };
+    toggleIcon === "nav_toogler"
+    ? setToggleIcon('nav__toggler toggle')
+    : setToggleIcon("nav__toggler");
+  }
 
   return (
-    <>
-      <Navbar className={`fixed-top ${navbarColor}`} expand="lg">
-        <Container>
-          <Navbar.Brand href="#home" onClick={() => scrollToSection('home')}>
-            Henry Kimani
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-            <Nav>
-              <Nav.Link href="#home" onClick={() => scrollToSection('home')}>Home</Nav.Link>
-              <Nav.Link href="#about" onClick={() => scrollToSection('about')}>About</Nav.Link>
-              <Nav.Link href="#projects" onClick={() => scrollToSection('projects')}>Projects</Nav.Link>
-              <Nav.Link href="#contact" onClick={() => scrollToSection('contact')}>Contact</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
+    <nav className='nav'>
+      <a href='#' className='nav__brand'>Kimani Henry</a>
+      <ul className={active}>
+        <li className='nav__item'><a href='#' className='nav__link'>Home</a></li>
+        <li className='nav__item'><a href='#' className='nav__link'>About</a></li>
+        <li className='nav__item'><a href='#' className='nav__link'>projects</a></li>
+        <li className='nav__item'><a href='#' className='nav__link'>Contact</a></li>
+      </ul>
+      <div onClick={navToggle} className={toggleIcon}>
+        <div className='line1'></div>
+        <div className='line2'></div>
+        <div className='line3'></div>
+      </div>
+    </nav>
   );
 };
 
