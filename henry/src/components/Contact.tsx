@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
           <div className="md:w-1/2">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label htmlFor="name" className="block text-sm font-medium text-yellow-700 mb-1">
                   Name
                 </label>
                 <input
@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label htmlFor="email" className="block text-sm font-medium text-yellow-700 mb-1">
                   Email
                 </label>
                 <input
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label htmlFor="message" className="block text-sm font-medium text-yellow-700 mb-1">
                   Message
                 </label>
                 <textarea
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors flex items-center justify-center"
+                className="w-90 bg-blue-500 text-white py-3 px-4 rounded-md hover:bg-blue-600 transition-colors flex items-center justify-center"
               >
                 Send Message
                 <Send className="ml-2" size={18} />
@@ -83,28 +83,28 @@ const Contact: React.FC = () => {
             </form>
           </div>
           <div className="md:w-1/2">
-            <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+            <div className="bg-gray-700 p-6 rounded-lg shadow-md">
+              <h3 className="text-xl text-white font-semibold mb-4">Contact Information</h3>
               <ul className="space-y-4">
                 <li className="flex items-center">
                   <Mail className="mr-3 text-blue-500" />
-                  <a href="mailto:your.email@example.com" className="hover:text-blue-500 transition-colors">
-                    your.email@example.com
+                  <a href="mailto:kimanihenryn@gmail.com" className="hover:text-blue-500 text-white transition-colors">
+                      kimanihenryn@gmail.com
                   </a>
                 </li>
                 <li className="flex items-center">
                   <Phone className="mr-3 text-blue-500" />
-                  <a href="tel:+1234567890" className="hover:text-blue-500 transition-colors">
-                    +1 (234) 567-890
+                  <a href="tel:+1234567890" className="hover:text-blue-500 text-white transition-colors">
+                    + (254) 705 614 824
                   </a>
                 </li>
                 <li className="flex items-center">
                   <MapPin className="mr-3 text-blue-500" />
-                  <span>Your City, Your Country</span>
+                  <span className='text-white'>Limuru, Kenya.</span>
                 </li>
               </ul>
               <div className="mt-6">
-                <h4 className="text-lg font-semibold mb-2">Connect with me</h4>
+                <h4 className="text-lg font-semibold mb-2 text-white">Connect with me</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Feel free to reach out on social media or schedule a video call. I'm always excited to discuss new projects and opportunities!
                 </p>

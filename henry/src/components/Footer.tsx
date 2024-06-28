@@ -1,13 +1,15 @@
 import React from 'react';
-import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: 'GitHub', icon: Github, url: 'https://github.com/yourusername' },
-    { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/yourusername' },
-    { name: 'Email', icon: Mail, url: 'mailto:your.email@example.com' },
+    { name: 'GitHub', icon: Github, url: 'https://github.com/H3nryK' },
+    { name: 'LinkedIn', icon: Linkedin, url: 'https://ke.linkedin.com/in/kimani-henry-19a1b6305' },
+    { name: 'Email', icon: Mail, url: 'mailto:kimanihenryn@gmail.com' },
+    { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/_.h3nry_k?igsh=Ym01NjV4NjNrZ2cyK'},
+    
   ];
 
   return (
@@ -50,7 +52,7 @@ const Footer: React.FC = () => {
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-sm text-gray-600 dark:text-gray-400">
           <p>&copy; {currentYear} Henry Kimani. All rights reserved.</p>
           <p className="mt-2 flex items-center justify-center">
-            Built with React and Tailwind CSS
+            Built with Typescript and Tailwind CSS
             <ExternalLink size={16} className="ml-1" />
           </p>
         </div>

@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
     { name: 'GitHub', icon: Github, url: 'https://github.com/H3nryK' },
     { name: 'LinkedIn', icon: Linkedin, url: 'https://ke.linkedin.com/in/kimani-henry-19a1b6305' },
     { name: 'Email', icon: Mail, url: 'mailto:kimanihenryn@gmail.com' },
-    { name: 'Instagram', icon: Instagram, url: 'https://github.com/H3nryK'},
+    { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/_.h3nry_k?igsh=Ym01NjV4NjNrZ2cy'},
   ];
 
   return (
