@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -18,10 +19,22 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Here you would typically send the form data to a server
-    console.log('Form submitted:', formData);
-    // Reset form after submission
-    setFormData({ name: '', email: '', message: '' });
+    
+    
+    emailjs.send(
+      'service_90yndab',
+      'template_bqvun98',
+      formData,
+      ''
+    ).then(
+      (result) => {
+        console.log('Email successfully sent!', result.status, result.text);
+        setFormData({ name: '', email: '', message: '' });
+      },
+      (error) => {
+        console.error('Error sending email: ', error);
+      }
+    )
   };
 
   return (
