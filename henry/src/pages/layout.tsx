@@ -8,7 +8,6 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen bg-gray-900 relative overflow-hidden">
-      <ParticleBackground />
       
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-md">
@@ -40,6 +39,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Main Content */}
       <main className="relative z-10">
         <div className="container mx-auto px-6 pt-20">
+          <ParticleBackground />
           {children}
         </div>
       </main>
