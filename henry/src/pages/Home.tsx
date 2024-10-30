@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Layout from './layout';
 import { Github, Linkedin, Mail, ExternalLink, Code, Database, Cloud, ChevronDown, Instagram } from 'lucide-react';
 import Folio from '../assets/images/folio.png';
+import Cow from '../assets/images/cow.jpeg';
 
 const HomePage = () => {
   const [, setIsImageLoaded] = useState(false);
@@ -20,16 +21,16 @@ const HomePage = () => {
       image: "/api/placeholder/600/400"
     },
     {
-      title: "Cloud Infrastructure Automation",
-      description: "AWS infrastructure as code using Terraform and GitHub Actions",
-      tags: ["AWS", "Terraform", "GitHub Actions"],
+      title: "Mascular-Dystrophy",
+      description: "A machine learning-based predictive model for individualized exercise response in muscular dystrophy.",
+      tags: ["pandas", "scikit-learn", "numpy", "python"],
       image: "/api/placeholder/600/400"
     },
     {
-      title: "E-commerce Microservices",
-      description: "Scalable microservices architecture using Node.js and Docker",
-      tags: ["Node.js", "Docker", "MongoDB"],
-      image: "/api/placeholder/600/400"
+      title: "Dairy Farm Management System",
+      description: "Backend canister written in Rust for managing dairy farming operations, including adding cows, recording milk production, and retrieving cow data. The canister is deployed on the Internet Computer (IC) blockchain.",
+      tags: ["Rust", "Shell", "Blockchain", "ICP"],
+      image: Cow
     }
   ];
 
@@ -42,12 +43,12 @@ const HomePage = () => {
     {
       icon: <Database className="w-8 h-8 mb-4 text-indigo-500" />,
       title: "Backend Development",
-      items: ["Node.js", "Python", "PostgreSQL", "Redis"]
+      items: ["Node.js", "Python", "PostgreSQL", "MySQL"]
     },
     {
       icon: <Cloud className="w-8 h-8 mb-4 text-indigo-500" />,
       title: "Cloud & DevOps",
-      items: ["AWS", "Docker", "Kubernetes", "CI/CD"]
+      items: ["Firebase", "Docker", "Kubernetes", "CI/CD"]
     }
   ];
 
@@ -389,13 +390,13 @@ const HomePage = () => {
                   className="p-4 bg-gray-800/30 rounded-lg backdrop-blur-sm border border-gray-700/50 hover:border-indigo-500/50 transition-colors"
                 >
                   <motion.a
-                    href="mailto:contact@example.com"
+                    href="mailto:henry@softech.com"
                     className="flex items-center text-gray-400 hover:text-white group"
                   >
                     <div className="p-2 bg-indigo-500/10 rounded-lg group-hover:bg-indigo-500/20 transition-colors">
                       <Mail className="w-5 h-5" />
                     </div>
-                    <span className="ml-4">contact@example.com</span>
+                    <span className="ml-4">henry@softech.com</span>
                   </motion.a>
                 </motion.div>
 
@@ -404,7 +405,7 @@ const HomePage = () => {
                   className="p-4 bg-gray-800/30 rounded-lg backdrop-blur-sm border border-gray-700/50 hover:border-indigo-500/50 transition-colors"
                 >
                   <motion.a
-                    href="https://linkedin.com"
+                    href="https://linkedin.com/in/kimani-henry"
                     className="flex items-center text-gray-400 hover:text-white group"
                   >
                     <div className="p-2 bg-indigo-500/10 rounded-lg group-hover:bg-indigo-500/20 transition-colors">
