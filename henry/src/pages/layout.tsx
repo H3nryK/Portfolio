@@ -14,16 +14,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-16">
             <span className="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-blue-500 text-transparent bg-clip-text">
-              Portfolio
+              Kimani Henry
             </span>
             <div className="hidden md:block">
               <div className="flex items-center space-x-8">
-                <a href="#home" className="text-gray-300 hover:text-indigo-500 transition-colors">
-                  Home
-                </a>
-                <a href="#about" className="text-gray-300 hover:text-indigo-500 transition-colors">
-                  About
-                </a>
                 <a href="#projects" className="text-gray-300 hover:text-indigo-500 transition-colors">
                   Projects
                 </a>
