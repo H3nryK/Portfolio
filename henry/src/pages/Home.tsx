@@ -4,6 +4,8 @@ import Layout from './layout';
 import { Github, Linkedin, Mail, ExternalLink, Code, Database, Cloud, ChevronDown, Instagram } from 'lucide-react';
 import Folio from '../assets/images/folio.png';
 import Cow from '../assets/images/cow.jpeg';
+import MD from '../assets/images/md.jpg';
+import Campus from '../assets/images/campus.webp';
 
 const HomePage = () => {
   const [, setIsImageLoaded] = useState(false);
@@ -15,16 +17,16 @@ const HomePage = () => {
   
   const projects = [
     {
-      title: "AI-Powered Analytics Dashboard",
-      description: "Real-time data visualization platform built with React, D3.js, and TensorFlow",
-      tags: ["React", "Python", "TensorFlow", "D3.js"],
-      image: "/api/placeholder/600/400"
+      title: "Campus-Connect",
+      description: "Mobile application to streamline the student & campus interaction.",
+      tags: ["Typescript", "React Native", "Ruby"],
+      image: Campus
     },
     {
       title: "Mascular-Dystrophy",
       description: "A machine learning-based predictive model for individualized exercise response in muscular dystrophy.",
       tags: ["pandas", "scikit-learn", "numpy", "python"],
-      image: "/api/placeholder/600/400"
+      image: MD
     },
     {
       title: "Dairy Farm Management System",
@@ -156,16 +158,27 @@ const HomePage = () => {
               transition={{ delay: 1.1, duration: 0.8 }}
               className="flex gap-6 mt-8"
             >
-              {[Github, Linkedin, Instagram].map((Icon, index) => (
-                <motion.a
-                  key={index}
-                  href="#"
-                  whileHover={{ y: -3, color: "#4F46E5" }}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <Icon size={24} />
-                </motion.a>
-              ))}
+              <motion.a
+                href="https://github.com/h3nryk"
+                whileHover={{ y: -3, color: "#4F46E5" }}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Github size={24} />
+              </motion.a>
+              <motion.a
+                href="https://linkedin.com/in/kimani-henry"
+                whileHover={{ y: -3, color: "#4F46E5" }}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Linkedin size={24} />
+              </motion.a>
+              <motion.a
+                href="https://www.instagram.com/_.h3nry_k/"
+                whileHover={{ y: -3, color: "#4F46E5" }}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Instagram size={24} />
+              </motion.a>
             </motion.div>
           </motion.div>
         </motion.div>
@@ -338,7 +351,7 @@ const HomePage = () => {
                     ))}
                   </div>
                   <motion.a
-                    href="#"
+                    href="https://github.com/h3nryk"
                     whileHover={{ x: 5 }}
                     className="inline-flex items-center text-indigo-400 hover:text-indigo-300 group"
                   >
@@ -390,13 +403,13 @@ const HomePage = () => {
                   className="p-4 bg-gray-800/30 rounded-lg backdrop-blur-sm border border-gray-700/50 hover:border-indigo-500/50 transition-colors"
                 >
                   <motion.a
-                    href="mailto:henry@softech.com"
+                    href="mailto:kimanihenryn@gmail.com"
                     className="flex items-center text-gray-400 hover:text-white group"
                   >
                     <div className="p-2 bg-indigo-500/10 rounded-lg group-hover:bg-indigo-500/20 transition-colors">
                       <Mail className="w-5 h-5" />
                     </div>
-                    <span className="ml-4">henry@softech.com</span>
+                    <span className="ml-4">kimanihenryn@gmail.com</span>
                   </motion.a>
                 </motion.div>
 
