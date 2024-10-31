@@ -1,0 +1,36 @@
+{
+    "name": "Henry Kimani Portfolio",
+    "short_name": "Henry K.",
+    "description": "Henry Kimani's Software Engineering Portfolio",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#6278E4",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "shortcuts": [
+      {
+        "name": "Projects",
+        "url": "/#projects",
+        "description": "View my portfolio projects"
+      },
+      {
+        "name": "Contact",
+        "url": "/#contact",
+        "description": "Get in touch with me"
+      }
+    ]
+  }

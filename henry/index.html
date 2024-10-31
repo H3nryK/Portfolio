@@ -1,42 +1,116 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
     <meta charset="UTF-8" />
-    <link rel="apple-touch-icon" type="image/icon" href="./src/assets/apple-touch-icon.png" />
-    <link rel="icon" type="image/icon" href="./src/assets/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Favicon and App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/favicon-16x16.png" />
+    <link rel="manifest" href="./src/assets/site.webmanifest" />
+    <link rel="mask-icon" href="./src/assets/safari-pinned-tab.svg" color="#6278E4" />
+    <meta name="msapplication-TileColor" content="#6278E4" />
+    <meta name="theme-color" content="#6278E4" />
 
     <!-- Primary Meta Tags -->
-    <title>Henry Kimani || Portfolio</title>
-    <meta name="description" content="I'm a passionate software developer with a keen eye for design and a love for creating intuitive, responsive software applications. With 2+ years of experience in the field, I've honed my skills in front-end, back-end, android, AI & blockchain technologies." />
+    <title>Henry Kimani | Innovative Software Developer & Tech Enthusiast</title>
+    <meta name="title" content="Henry Kimani | Innovative Software Developer & Tech Enthusiast" />
+    <meta name="description" content="Award-winning software developer specializing in full-stack web development, mobile apps, AI/ML, and blockchain solutions. Explore my portfolio of innovative projects and technical expertise." />
     <meta name="author" content="Henry Kimani" />
-    <meta name="keywords" content="Web Development, Mobile Development, React, TypeScript, Tailwind CSS, GitHub Integration, Interactive 3D Elements, Gamified User Experience, kimani, henry kimani, machakos University, software engineer, blockchain engineer, developer, young software engineer, kenyan blockchain, kenya, software negineering, mksu, machakos uni, icp" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="English" />
-
-    <!-- Open Graph / Facebook Meta Tags -->
+    <meta name="keywords" content="Henry Kimani, Software Engineer, Full Stack Developer, React Developer, TypeScript Expert, Mobile App Developer, Blockchain Developer, AI Engineer, Kenya Tech, Machakos University, Web3 Developer, Frontend Developer, Backend Developer, ICP Blockchain, React Native, Node.js, Machine Learning, Portfolio, Software Development, Tech Innovation" />
+    
+    <!-- OpenGraph Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Henry Kimani || Portfolio" />
-    <meta property="og:description" content="I'm a passionate software developer with a keen eye for design and a love for creating intuitive, responsive software applications. With 2+ years of experience in the field, I've honed my skills in front-end, back-end, android, AI & blockchain technologies." />
-    <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D5622AQHLDzp57ezsnA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1727779849262?e=1733356800&v=beta&t=y1A46aN3Y91fEmu3tTgKflyG4epKDYCG2iQuo2hIcA0" />
     <meta property="og:url" content="https://henry.jetbrainscollege.com" />
-    <meta property="og:site_name" content="Henry Kimani || Portfolio" />
+    <meta property="og:title" content="Henry Kimani | Innovative Software Engineer & Tech Enthusiast" />
+    <meta property="og:description" content="Discover how I blend creativity with technical expertise in full-stack development, mobile apps, AI, and blockchain technologies. View my featured projects and technical journey." />
+    <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D5622AQHLDzp57ezsnA/feedshare-shrink_2048_1536/0/1727779849262?e=1733356800&v=beta&t=y1A46aN3Y91fEmu3tTgKflyG4epKDYCG2iQuo2hIcA0" />
+    <meta property="og:image:alt" content="Henry Kimani - Software Engineer Portfolio" />
+    <meta property="og:site_name" content="Henry Kimani Portfolio" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Henry Kimani || Portfolio" />
-    <meta name="twitter:description" content="I'm a passionate software developer with a keen eye for design and a love for creating intuitive, responsive software applications. With 2+ years of experience in the field, I've honed my skills in front-end, back-end, android, AI & blockchain technologies." />
-    <meta name="twitter:image" content="https://media.licdn.com/dms/image/v2/D5622AQHLDzp57ezsnA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1727779849262?e=1733356800&v=beta&t=y1A46aN3Y91fEmu3tTgKflyG4epKDYCG2iQuo2hIcA0" />
     <meta name="twitter:site" content="@H3nryKim" />
+    <meta name="twitter:creator" content="@H3nryKim" />
+    <meta name="twitter:title" content="Henry Kimani | Innovative Software Engineer & Tech Enthusiast" />
+    <meta name="twitter:description" content="Explore my journey in software development, from creating intuitive web applications to developing cutting-edge blockchain solutions. See how I can help bring your tech vision to life." />
+    <meta name="twitter:image" content="https://media.licdn.com/dms/image/v2/D5622AQHLDzp57ezsnA/feedshare-shrink_2048_1536/0/1727779849262?e=1733356800&v=beta&t=y1A46aN3Y91fEmu3tTgKflyG4epKDYCG2iQuo2hIcA0" />
+    <meta name="twitter:image:alt" content="Henry Kimani - Software Engineer Portfolio" />
 
     <!-- Additional SEO Meta Tags -->
     <link rel="canonical" href="https://henry.jetbrainscollege.com" />
-    <meta name="theme-color" content="#6278E4" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  </head>
-  <body>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Structured Data - Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Henry Kimani",
+      "url": "https://henry.jetbrainscollege.com",
+      "image": "https://media.licdn.com/dms/image/v2/D5622AQHLDzp57ezsnA/feedshare-shrink_2048_1536/0/1727779849262?e=1733356800&v=beta&t=y1A46aN3Y91fEmu3tTgKflyG4epKDYCG2iQuo2hIcA0",
+      "sameAs": [
+        "https://www.linkedin.com/in/kimani-henry",
+        "https://github.com/h3nryk",
+        "https://x.com/H3nryKim",
+        "https://www.instagram.com/_.h3nry_k"
+      ],
+      "jobTitle": "Software Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Independent Developer"
+      },
+      "description": "Versatile software developer specializing in full-stack web development, mobile applications, AI/ML, and blockchain technologies.",
+      "alumniOf": {
+        "@type": "University",
+        "name": "Machakos University"
+      },
+      "knowsAbout": [
+        "Web Development",
+        "Mobile App Development",
+        "Artificial Intelligence",
+        "Blockchain Technology",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Python",
+        "ICP Blockchain"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data - WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Henry Kimani Portfolio",
+      "url": "https://henry.jetbrainscollege.com",
+      "description": "Professional portfolio of Henry Kimani, showcasing software development projects and technical expertise",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://henry.jetbrainscollege.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+</body>
 </html>
