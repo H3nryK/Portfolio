@@ -5,61 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+    <!-- Performance Optimizations -->
+    <link rel="preload" as="image" href="./src/assets/folio.webp" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <meta http-equiv="Cache-Control" content="max-age=31536000" />
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+
     <!-- Favicon and App Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/favicon-16x16.png" />
-    <link rel="manifest" href="./src/assets/site.webmanifest" />
+    <link rel="manifest" href="./src/assets/site.webmanifest" crossorigin="use-credentials" />
     <link rel="mask-icon" href="./src/assets/safari-pinned-tab.svg" color="#6278E4" />
     <meta name="msapplication-TileColor" content="#6278E4" />
     <meta name="theme-color" content="#6278E4" />
 
     <!-- Primary Meta Tags -->
-    <title>Kimani Henry | Innovative Software Developer & Tech Enthusiast</title>
-    <meta name="title" content="Kimani Henry | Innovative Software Developer & Tech Enthusiast" />
-    <meta name="description" content="Award-winning software developer specializing in full-stack web development, mobile apps, AI/ML, and blockchain solutions. Explore my portfolio of innovative projects and technical expertise." />
-    <meta name="author" content="Henry Kimani" />
-    <meta name="keywords" content="Henry Kimani, Software Engineer, Full Stack Developer, React Developer, TypeScript Expert, Mobile App Developer, Blockchain Developer, AI Engineer, Kenya Tech, Machakos University, Web3 Developer, Frontend Developer, Backend Developer, ICP Blockchain, React Native, Node.js, Machine Learning, Portfolio, Software Development, Tech Innovation" />
+    <title>Kimani Henry || Innovative Software & Blockchain Developer</title>
+    <meta name="title" content="Kimani Henry || Innovative Software & Blockchain Developer" />
+    <meta name="description" content="Award-winning software architect crafting next-gen solutions in Web3, AI/ML, and full-stack development. Discover innovative projects combining blockchain, artificial intelligence, and cutting-edge web technologies. Based in Kenya, impacting globally." />
+    <meta name="author" content="Kimani Henry" />
+    <meta name="keywords" content="Kimani Henry, Software Engineer, Software Architect, Full Stack Developer, Full Stack Engineer, Kimani, Henry, React Developer, React Expert, TypeScript Expert, Mobile App Developer, Blockchain Developer, AI Engineer, Kenya Tech, Machakos University, Web3 Developer, ICP HUB kenya, ICP, Frontend Developer, Backend Developer, ICP Blockchain, React Native, Node.js, Machine Learning, Portfolio, Software Development, Tech Innovation, Machakos, African Tech Talent" />
     
     <!-- OpenGraph Meta Tags -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://henry.jetbrainscollege.com" />
-    <meta property="og:title" content="Henry Kimani | Innovative Software Engineer & Tech Enthusiast" />
-    <meta property="og:description" content="Discover how I blend creativity with technical expertise in full-stack development, mobile apps, AI, and blockchain technologies. View my featured projects and technical journey." />
-    <meta property="og:image" content="https://henry.jetbrainscollege.com/assets/folio-bB7iHQtR.png" />
-    <meta property="og:image:alt" content="Henry Kimani - Software Engineer Portfolio" />
-    <meta property="og:site_name" content="Henry Kimani Portfolio" />
+    <meta property="og:title" content="Kimani Henry || Innovative Software & Blockchain Developer" />
+    <meta property="og:description" content="Award-winning software architect crafting next-gen solutions in Web3, AI/ML, and full-stack development. Discover innovative projects combining blockchain, artificial intelligence, and cutting-edge web technologies. Based in Kenya, impacting globally." />
+    <meta property="og:image" content="https://henry.jetbrainscollege.com/assets/folio.webp" />
+    <meta property="og:image:alt" content="Kimani Henry - Software Engineer Portfolio" />
+    <meta property="og:site_name" content="Kimani Henry Portfolio" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="en_GB" />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@H3nryKim" />
     <meta name="twitter:creator" content="@H3nryKim" />
-    <meta name="twitter:title" content="Henry Kimani | Innovative Software Engineer & Tech Enthusiast" />
-    <meta name="twitter:description" content="Explore my journey in software development, from creating intuitive web applications to developing cutting-edge blockchain solutions. See how I can help bring your tech vision to life." />
-    <meta name="twitter:image" content="https://henry.jetbrainscollege.com/assets/folio-bB7iHQtR.png" />
-    <meta name="twitter:image:alt" content="Henry Kimani - Software Engineer Portfolio" />
+    <meta name="twitter:title" content="Kimani Henry || Innovative Software & Blockchain Developer" />
+    <meta name="twitter:description" content="Award-winning software architect crafting next-gen solutions in Web3, AI/ML, and full-stack development. Discover innovative projects combining blockchain, artificial intelligence, and cutting-edge web technologies. Based in Kenya, impacting globally." />
+    <meta name="twitter:image" content="https://henry.jetbrainscollege.com/assets/folio.png" />
+    <meta name="twitter:image:alt" content="Kimani Henry - Software Engineer Portfolio" />
 
     <!-- Additional SEO Meta Tags -->
     <link rel="canonical" href="https://henry.jetbrainscollege.com" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="format-detection" content="telephone=no" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Kimani Henry Portfolio" />
+    <meta name="apple-mobile-web-app-title" content="Kimani Henry Portfolio" />
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="KE" />
+    <meta name="geo.placename" content="Limuru" />
     
     <!-- Preload Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     
     <!-- Structured Data - Person -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Henry Kimani",
+      "name": "Kimani Henry",
+      "givenName": "Henry",
+      "familyName": "Kimani",
       "url": "https://henry.jetbrainscollege.com",
-      "image": "https://henry.jetbrainscollege.com/assets/folio-bB7iHQtR.png",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://henry.jetbrainscollege.com/assets/folio.webp",
+        "width": "1200",
+        "height": "630"
+      },
       "sameAs": [
         "https://www.linkedin.com/in/kimani-henry",
         "https://github.com/h3nryk",
@@ -71,7 +101,7 @@
         "@type": "Organization",
         "name": "Independent Developer"
       },
-      "description": "Versatile software developer specializing in full-stack web development, mobile applications, AI/ML, and blockchain technologies.",
+      "description": "Award-winning software architect crafting next-gen solutions in Web3, AI/ML, and full-stack development. Discover innovative projects combining blockchain, artificial intelligence, and cutting-edge web technologies. Based in Kenya, impacting globally.",
       "alumniOf": {
         "@type": "University",
         "name": "Machakos University"
@@ -95,9 +125,14 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Henry Kimani Portfolio",
+      "name": "Kimani Henry Portfolio",
+      "alternateName": "Henry K Portfolio",
       "url": "https://henry.jetbrainscollege.com",
-      "description": "Professional portfolio of Henry Kimani, showcasing software development projects and technical expertise",
+      "description": "Award-winning software architect crafting next-gen solutions in Web3, AI/ML, and full-stack development. Discover innovative projects combining blockchain, artificial intelligence, and cutting-edge web technologies. Based in Kenya, impacting globally.",
+      "publisher": {
+        "@type": "Person",
+        "name": "Henry Kimani"
+      },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -105,7 +140,11 @@
           "urlTemplate": "https://henry.jetbrainscollege.com/search?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
-      }
+      },
+      "inLanguage": "en-US",
+      "copyrightYear": "2025",
+      "datePublished": "2025-01-08",
+      "dateModified": "2025-01-08"
     }
     </script>
 </head>
