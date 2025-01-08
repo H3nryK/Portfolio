@@ -1,28 +1,29 @@
 import { motion } from 'framer-motion';
-import { Code, Database, Cloud } from 'lucide-react';
+import { FaCode } from "react-icons/fa6";
+import { FaDatabase, FaCloud } from "react-icons/fa";
 
 export default function SkillSection() {
     
     const skills = [
         {
-        icon: <Code className="w-8 h-8 mb-4 text-indigo-500" />,
+        icon: <FaCode className="w-8 h-8 mb-4 text-indigo-500" />,
         title: "Frontend Development",
         items: ["React", "TypeScript", "Next.js", "Tailwind CSS"]
         },
         {
-        icon: <Database className="w-8 h-8 mb-4 text-indigo-500" />,
+        icon: <FaDatabase className="w-8 h-8 mb-4 text-indigo-500" />,
         title: "Backend Development",
         items: ["Node.js", "Python", "PostgreSQL", "MySQL"]
         },
         {
-        icon: <Cloud className="w-8 h-8 mb-4 text-indigo-500" />,
-        title: "Cloud & DevOps",
-        items: ["Firebase", "Docker", "Kubernetes", "CI/CD"]
+        icon: <FaCloud className="w-8 h-8 mb-4 text-indigo-500" />,
+        title: "Cloud & Blockchain",
+        items: ["Firebase", "Motoko", "Rust", "Git"]
         }
     ];
 
     return (
-        <section className="py-20 px-4">
+        <section id="skills" className="py-20 px-4">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

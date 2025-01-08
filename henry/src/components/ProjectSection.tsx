@@ -1,28 +1,31 @@
 import Cow from '../assets/images/cow.jpeg';
 import MD from '../assets/images/md.jpg';
-import Campus from '../assets/images/campus.webp';
+import Rhino from '../assets/images/rhino.jpg';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 
 export default function ProjectSection() {  
     const projects = [
       {
-        title: "Campus-Connect",
-        description: "Mobile application to streamline the student & campus interaction.",
-        tags: ["Typescript", "React Native", "Ruby"],
-        image: Campus
+        title: "Steppe Pulse",
+        description: "An animal adoption system that promotes environmental conservation and tourism growth.",
+        tags: ["Typescript", "Motoko", "Rust"],
+        image: Rhino,
+        url: "https://github.com/H3nryK/SteppePulse"
       },
       {
         title: "Mascular-Dystrophy",
         description: "A machine learning-based predictive model for individualized exercise response in muscular dystrophy.",
         tags: ["pandas", "scikit-learn", "numpy", "python"],
-        image: MD
+        image: MD,
+        url: "https://github.com/H3nryK/Mascular-Dystrophy"
       },
       {
         title: "Dairy Farm Management System",
-        description: "Backend canister written in Rust for managing dairy farming operations, including adding cows, recording milk production, and retrieving cow data. The canister is deployed on the Internet Computer (IC) blockchain.",
+        description: "Backend canister for managing dairy farming operations, including adding cows, recording milk production, and retrieving cow data.",
         tags: ["Rust", "Shell", "Blockchain", "ICP"],
-        image: Cow
+        image: Cow,
+        url: "https://github.com/H3nryK/dairy"
       }
     ];
 
@@ -79,7 +82,7 @@ export default function ProjectSection() {
                         ))}
                         </div>
                         <motion.a
-                        href="https://github.com/h3nryk"
+                        href={project.url}
                         whileHover={{ x: 5 }}
                         className="inline-flex items-center text-indigo-400 hover:text-indigo-300 group"
                         >
