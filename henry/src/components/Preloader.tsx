@@ -1,207 +1,198 @@
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Code, Database, Cloud } from 'lucide-react';
+import { Code, Database, Cloud, Server, Cpu, Wifi } from 'lucide-react';
 
-const Preloader = () => {
-  const iconVariants = {
-    initial: { scale: 0, rotate: -180 },
-    animate: { 
-      scale: 1, 
-      rotate: 0,
-      transition: { 
-        type: "spring",
-        stiffness: 260,
-        damping: 20,
-        delay: 0.5
-      }
-    }
-  };
+const SmartPreloader = () => {
+  const [progress, setProgress] = useState(0);
 
-  const circleVariants = {
-    animate: {
-      scale: [1, 1.2, 1],
-      opacity: [0.5, 0.8, 0.5],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress(prev => {
+        const next = prev + 1;
+        if (next >= 100) clearInterval(timer);
+        return next > 100 ? 100 : next;
+      });
+    }, 50);
+    return () => clearInterval(timer);
+  }, []);
 
-  const textVariants = {
-    animate: {
-      opacity: [0, 1, 0],
-      transition: {
-        duration: 1.5,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
+  const iconSet = [Code, Database, Cloud, Server, Cpu, Wifi];
 
-  const iconContainerVariants = {
-    animate: {
-      rotate: 360,
-      transition: {
-        duration: 8,
-        repeat: Infinity,
-        ease: "linear"
-      }
-    }
-  };
+  const hexagonPoints = Array.from({ length: 6 }).map((_, i) => {
+    const angle = (i * Math.PI) / 3 - Math.PI / 2;
+    const radius = 60;
+    return {
+      x: Math.cos(angle) * radius,
+      y: Math.sin(angle) * radius,
+    };
+  });
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className="fixed inset-0 flex items-center justify-center bg-gray-900/95 z-50 overflow-hidden"
+      className="fixed inset-0 flex items-center justify-center bg-slate-900/95 z-50"
     >
-      <div className="relative w-64 h-64">
-        {/* Background blur effect */}
-        <div className="absolute inset-0 bg-indigo-500/20 blur-3xl rounded-full" />
-        
-        {/* Rotating circles */}
-        {[0, 1, 2].map((index) => (
-          <motion.div
-            key={index}
-            animate={{ rotate: 360 }}
-            transition={{
-              duration: 3 + index,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-            className={`absolute inset-0 border-2 rounded-full ${
-              index === 0 ? 'border-indigo-500/30' :
-              index === 1 ? 'border-blue-500/30' :
-              'border-purple-500/30'
-            }`}
-            style={{
-              transform: `scale(${1 + index * 0.1})`,
-            }}
+      <div className="relative w-96 h-96">
+        {/* Animated background gradients */}
+        <motion.div
+          animate={{
+            background: [
+              'radial-gradient(circle, rgba(99,102,241,0.2) 0%, rgba(99,102,241,0) 70%)',
+              'radial-gradient(circle, rgba(168,85,247,0.2) 0%, rgba(168,85,247,0) 70%)',
+              'radial-gradient(circle, rgba(99,102,241,0.2) 0%, rgba(99,102,241,0) 70%)',
+            ],
+          }}
+          transition={{ duration: 4, repeat: Infinity }}
+          className="absolute inset-0 blur-2xl"
+        />
+
+        {/* Progress ring */}
+        <svg className="absolute inset-0 w-full h-full -rotate-90">
+          <motion.circle
+            cx="192"
+            cy="192"
+            r="150"
+            stroke="currentColor"
+            strokeWidth="4"
+            fill="none"
+            className="text-indigo-500/20"
           />
-        ))}
+          <motion.circle
+            cx="192"
+            cy="192"
+            r="150"
+            stroke="url(#gradient)"
+            strokeWidth="4"
+            fill="none"
+            strokeLinecap="round"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: progress / 100 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          />
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#6366f1" />
+              <stop offset="50%" stopColor="#8b5cf6" />
+              <stop offset="100%" stopColor="#a855f7" />
+            </linearGradient>
+          </defs>
+        </svg>
 
-        {/* Pulsing circles */}
-        {[0, 1, 2].map((index) => (
-          <motion.div
-            key={`pulse-${index}`}
-            variants={circleVariants}
-            animate="animate"
-            className="absolute inset-0 flex items-center justify-center"
-            style={{ animationDelay: `${index * 0.3}s` }}
-          >
-            <div className={`w-32 h-32 rounded-full ${
-              index === 0 ? 'bg-indigo-500/10' :
-              index === 1 ? 'bg-blue-500/10' :
-              'bg-purple-500/10'
-            }`} />
-          </motion.div>
-        ))}
-
-        {/* Rotating icons */}
-        <motion.div
-          variants={iconContainerVariants}
-          animate="animate"
-          className="absolute inset-0"
-        >
-          {[Code, Database, Cloud].map((Icon, index) => (
+        {/* Hexagon with icons */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          {hexagonPoints.map((point, index) => (
             <motion.div
-              key={`icon-${index}`}
-              variants={iconVariants}
-              initial="initial"
-              animate="animate"
-              className="absolute"
-              style={{
-                top: `${50 + 35 * Math.sin(2 * Math.PI * index / 3)}%`,
-                left: `${50 + 35 * Math.cos(2 * Math.PI * index / 3)}%`,
-                transform: 'translate(-50%, -50%)',
+              key={index}
+              initial={{ x: 0, y: 0, opacity: 0 }}
+              animate={{
+                x: point.x,
+                y: point.y,
+                opacity: 1,
               }}
+              transition={{
+                duration: 1,
+                delay: index * 0.1,
+                type: "spring",
+                stiffness: 100,
+              }}
+              className="absolute"
             >
-              <Icon 
-                className={`w-8 h-8 ${
-                  index === 0 ? 'text-indigo-500' :
-                  index === 1 ? 'text-blue-500' :
-                  'text-purple-500'
-                }`}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Center logo */}
-        <motion.div
-          animate={{ 
-            scale: [1, 1.1, 1],
-            rotate: [0, 360],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-        >
-          <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl">KH</span>
-          </div>
-        </motion.div>
-
-        {/* Loading text */}
-        <motion.div
-          variants={textVariants}
-          animate="animate"
-          className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
-        >
-          <span className="text-white text-lg font-medium mb-2">Loading</span>
-          <div className="flex space-x-1">
-            {[0, 1, 2].map((index) => (
               <motion.div
-                key={`dot-${index}`}
                 animate={{
-                  y: [-2, 2, -2],
-                  opacity: [0.5, 1, 0.5],
+                  rotate: 360,
+                  scale: [1, 1.2, 1],
                 }}
                 transition={{
-                  duration: 0.6,
-                  repeat: Infinity,
-                  delay: index * 0.2,
+                  rotate: { duration: 8, repeat: Infinity, ease: "linear" },
+                  scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
                 }}
-                className="w-2 h-2 bg-indigo-500 rounded-full"
-              />
-            ))}
-          </div>
-        </motion.div>
+                className="relative"
+              >
+                {React.createElement(iconSet[index], {
+                  className: "w-8 h-8 text-indigo-400",
+                  strokeWidth: 1.5,
+                })}
+                <motion.div
+                  className="absolute inset-0 bg-indigo-500/20 blur-xl rounded-full"
+                  animate={{
+                    opacity: [0.5, 1, 0.5],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+              </motion.div>
+            </motion.div>
+          ))}
 
-        {/* Particle effects */}
-        {[...Array(20)].map((_, index) => (
+          {/* Center element */}
+          <motion.div
+            transition={{
+              rotate: { duration: 10, repeat: Infinity, ease: "linear" },
+              scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+            }}
+            className="relative"
+          >
+            <div className="w-20 h-20 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-0.5">
+              <div className="w-full h-full rounded-xl bg-slate-900 flex items-center justify-center">
+                <span className="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+                  {progress}%
+                </span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Floating particles */}
+        {Array.from({ length: 30 }).map((_, index) => (
           <motion.div
             key={`particle-${index}`}
-            initial={{ 
-              x: 0, 
-              y: 0, 
+            initial={{
+              x: 0,
+              y: 0,
               opacity: 0,
-              scale: 0
+              scale: 0,
             }}
             animate={{
-              x: Math.random() * 200 - 100,
-              y: Math.random() * 200 - 100,
-              opacity: [0, 1, 0],
+              x: Math.random() * 400 - 200,
+              y: Math.random() * 400 - 200,
+              opacity: [0, 0.5, 0],
               scale: [0, 1, 0],
             }}
             transition={{
-              duration: 2,
+              duration: 3,
               repeat: Infinity,
               delay: Math.random() * 2,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
-            className="absolute top-1/2 left-1/2 w-1 h-1 bg-indigo-500 rounded-full"
+            className="absolute top-1/2 left-1/2 w-1 h-1 bg-indigo-400 rounded-full"
           />
         ))}
+
+        {/* Status text */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 w-full text-center"
+        >
+          <motion.p
+            animate={{ opacity: [0.5, 1, 0.5] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="text-indigo-300 text-sm font-medium"
+          >
+            {progress < 30 ? "Initializing..." :
+             progress < 60 ? "Loading Resources..." :
+             progress < 90 ? "Preparing Data..." :
+             "Almost Ready..."}
+          </motion.p>
+        </motion.div>
       </div>
     </motion.div>
   );
 };
 
-export default Preloader;
+export default SmartPreloader;
