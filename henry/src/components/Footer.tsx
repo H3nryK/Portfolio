@@ -1,13 +1,17 @@
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { FaInstagram, FaWhatsapp, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { SiGmail } from "react-icons/si";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { icon: <Github className="w-5 h-5" />, label: "GitHub", href: "#" },
-    { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", href: "#" },
-    { icon: <Twitter className="w-5 h-5" />, label: "Twitter", href: "#" },
-    { icon: <Mail className="w-5 h-5" />, label: "Email", href: "#" }
+    { icon: <FaGithub className="w-5 h-5" />, label: "GitHub", href: "https://github.com/h3nryk" },
+    { icon: <FaLinkedinIn className="w-5 h-5" />, label: "LinkedIn", href: "https://linkedin.com/in/kimani-henry" },
+    { icon: <FaSquareXTwitter className="w-5 h-5" />, label: "Twitter", href: "https://x.com/H3nryKim" },
+    { icon: <SiGmail className="w-5 h-5" />, label: "Email", href: "mailto:kimanihenryn@gmail.com" },
+    { icon: <FaInstagram className="w-5 h-5" />, label: "Instagram", href: "https://www.instagram.com/_.h3nry_k/" },
+    { icon: <FaWhatsapp className="w-5 h-5" />, label: "Whatsapp", href: "https://wa.me/+254705618424" }
   ];
 
   return (
