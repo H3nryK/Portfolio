@@ -38,7 +38,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section className="relative min-h-screen w-full overflow-hidden" id='about'>
       <div className="container mx-auto px-4 py-2 md:py-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
           {/* Text Content */}

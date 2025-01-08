@@ -18,8 +18,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </span>
             <div className="hidden md:block">
               <div className="flex items-center space-x-8">
+                <a href="#about" className="text-gray-300 hover:text-indigo-500 transition-colors">
+                  About
+                </a>
                 <a href="#skills" className="text-gray-300 hover:text-indigo-500 transition-colors">
                   Skills
+                </a>
+                <a href="#cta" className="text-gray-300 hover:text-indigo-500 transition-colors">
+                  CTA
                 </a>
                 <a href="#projects" className="text-gray-300 hover:text-indigo-500 transition-colors">
                   Projects
