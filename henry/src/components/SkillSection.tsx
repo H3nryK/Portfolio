@@ -31,7 +31,7 @@ export default function SkillSection() {
                 viewport={{ once: true }}
                 className="max-w-6xl mx-auto"
             >
-                <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-indigo-500 to-blue-500 text-transparent bg-clip-text">
+                <h2 className="text-4xl font-bold text-center mb-16 text-white">
                 Skills & Expertise
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

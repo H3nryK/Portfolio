@@ -11,7 +11,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="max-w-6xl mx-auto"
           >
-            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-indigo-500 to-blue-500 text-transparent bg-clip-text">
+            <h2 className="text-4xl font-bold text-center mb-16 text-white">
               Get In Touch
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

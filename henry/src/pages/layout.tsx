@@ -41,7 +41,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       {/* Main Content */}
       <main className="relative z-10">
-        <div className="container mx-auto px-6 pt-2">
+        <div className="container mx-auto pt-2">
           <ParticleBackground />
           {children}
         </div>

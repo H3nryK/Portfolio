@@ -61,7 +61,7 @@ const CTASection = () => {
           Interested in Working Together?
         </motion.h2>
         <motion.p 
-          className="text-blue-100 mb-8 max-w-2xl mx-auto"
+          className="text-gray-400 mb-8 max-w-2xl mx-auto"
           variants={itemVariants}
         >
           Download my CV to learn more about my experience and skills, 
