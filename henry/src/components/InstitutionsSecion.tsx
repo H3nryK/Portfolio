@@ -9,7 +9,7 @@ const InstitutionsSection = () => {
     { src: 'https://guild-code.com/static/assets/media/light.png', name: 'Guild-Code' },
     { src: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Machakos_University_Logo.png/285px-Machakos_University_Logo.png', name: 'Machakos University' },
     { src: 'https://olpmonitor.com/static/images/logo.webp', name: 'Northum Tech' },
-    { src: 'https://icphubkenya.io/images/brand3.png', name: 'ICP HUB Kenya' },
+    { src: 'https://icphubkenya.io/images/WhiteLogo.png', name: 'ICP HUB Kenya' },
   ];
 
   const sliderSettings = {
