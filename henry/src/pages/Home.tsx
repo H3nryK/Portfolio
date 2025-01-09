@@ -6,6 +6,7 @@ import ProjectSection from '../components/ProjectSection';
 import ContactSection from '../components/ContactSection';
 import CTASection from '../components/CTASection';
 import Footer from '../components/Footer';
+import InstitutionsSection from '../components/InstitutionsSecion';
 
 const HomePage = () => {
 
@@ -19,6 +20,9 @@ const HomePage = () => {
 
       {/* CTA Section */}
       <CTASection />
+
+      {/* Institutions Section */}
+      <InstitutionsSection />
 
       {/* Projects Section */}
       <ProjectSection />
