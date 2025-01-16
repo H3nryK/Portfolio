@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { FaInstagram, FaWhatsapp, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaGithub, FaLinkedinIn, FaDiscord, FaTelegram } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import Folio from '../assets/images/folio.webp';
@@ -137,7 +137,9 @@ export default function HeroSection() {
                   { Icon: FaInstagram, href: "https://www.instagram.com/_.h3nry_k/" },
                   { Icon: FaWhatsapp, href: "https://wa.me/+254705618424"},
                   { Icon: FaSquareXTwitter, href: "https://x.com/H3nryKim"},
-                  { Icon: SiGmail, href: "mailto:kimanihenryn@gmail.com"}
+                  { Icon: SiGmail, href: "mailto:kimanihenryn@gmail.com"},
+                  { Icon: FaDiscord, href: "mailto:kimanihenryn@gmail.com"},
+                  { Icon: FaTelegram, href: "mailto:kimanihenryn@gmail.com"}
                 ].map(({ Icon, href }) => (
                   <motion.a
                     key={href}

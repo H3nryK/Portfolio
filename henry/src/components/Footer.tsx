@@ -1,4 +1,4 @@
-import { FaInstagram, FaWhatsapp, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaGithub, FaLinkedinIn, FaDiscord, FaTelegram } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 
@@ -11,7 +11,9 @@ const Footer = () => {
     { icon: <FaSquareXTwitter className="w-5 h-5" />, label: "Twitter", href: "https://x.com/H3nryKim" },
     { icon: <SiGmail className="w-5 h-5" />, label: "Email", href: "mailto:kimanihenryn@gmail.com" },
     { icon: <FaInstagram className="w-5 h-5" />, label: "Instagram", href: "https://www.instagram.com/_.h3nry_k/" },
-    { icon: <FaWhatsapp className="w-5 h-5" />, label: "Whatsapp", href: "https://wa.me/+254705618424" }
+    { icon: <FaWhatsapp className="w-5 h-5" />, label: "Whatsapp", href: "https://wa.me/+254705618424" },
+    { icon: <FaDiscord className="w-5 h-5" />, label: "Discord", href: "https://wa.me/+254705618424" },
+    { icon: <FaTelegram className="w-5 h-5" />, label: "Telegram", href: "https://wa.me/+254705618424" }
   ];
 
   return (
