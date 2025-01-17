@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ParticleBackground from './particles';
 import CV from '../assets/kimani.pdf';
 
@@ -8,6 +8,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const sidebarRef = useRef<HTMLDivElement | null>(null);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
@@ -20,6 +21,23 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     link.click();
     document.body.removeChild(link);
   };
+
+  // Close sidebar on outside click
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
+        setIsSidebarOpen(false);
+      }
+    };
+
+    if (isSidebarOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isSidebarOpen]);
 
   return (
     <div className="min-h-screen bg-gray-900 relative overflow-hidden">
@@ -62,20 +80,32 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 onClick={toggleSidebar}
                 className="text-gray-300 hover:text-indigo-500 focus:outline-none"
               >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
+                {isSidebarOpen ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                  </svg>
+                ) : (
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                )}
               </button>
             </div>
           </div>
@@ -85,7 +115,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Sidebar for Mobile */}
       {isSidebarOpen && (
         <div className="fixed inset-0 bg-gray-900 bg-opacity-75 backdrop-blur-md z-40 flex">
-          <div className="w-64 bg-gray-900/80 backdrop-blur-md p-6">
+          <div ref={sidebarRef} className="w-64 bg-gray-900/80 backdrop-blur-md p-6">
             <button
               onClick={toggleSidebar}
               className="text-gray-300 hover:text-indigo-500 focus:outline-none mb-6"

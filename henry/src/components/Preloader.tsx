@@ -66,10 +66,7 @@ const SmartPreloader = () => {
             stroke="url(#gradient)"
             strokeWidth="4"
             fill="none"
-            strokeLinecap="round"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: progress / 100 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
+            transition={{ duration: 5, ease: "linear" }}
           />
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -128,66 +125,26 @@ const SmartPreloader = () => {
               </motion.div>
             </motion.div>
           ))}
-
-          {/* Center element */}
-          <motion.div
-            transition={{
-              rotate: { duration: 10, repeat: Infinity, ease: "linear" },
-              scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
-            }}
-            className="relative"
-          >
-            <div className="w-20 h-20 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-0.5">
-              <div className="w-full h-full rounded-xl bg-slate-900 flex items-center justify-center">
-                <span className="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
-                  {progress}%
-                </span>
-              </div>
-            </div>
-          </motion.div>
         </div>
-
-        {/* Floating particles */}
-        {Array.from({ length: 30 }).map((_, index) => (
-          <motion.div
-            key={`particle-${index}`}
-            initial={{
-              x: 0,
-              y: 0,
-              opacity: 0,
-              scale: 0,
-            }}
-            animate={{
-              x: Math.random() * 400 - 200,
-              y: Math.random() * 400 - 200,
-              opacity: [0, 0.5, 0],
-              scale: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-              ease: "easeInOut",
-            }}
-            className="absolute top-1/2 left-1/2 w-1 h-1 bg-indigo-400 rounded-full"
-          />
-        ))}
 
         {/* Status text */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 w-full text-center"
+          className="absolute inset-x-0 bottom-10 mt-12 text-center"
         >
           <motion.p
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="text-indigo-300 text-sm font-medium"
           >
-            {progress < 30 ? "Initializing..." :
-             progress < 60 ? "Loading Resources..." :
-             progress < 90 ? "Preparing Data..." :
-             "Almost Ready..."}
+            {progress < 30
+              ? "Initializing..."
+              : progress < 60
+              ? "Loading Resources..."
+              : progress < 90
+              ? "Preparing Data..."
+              : "Almost Ready..."}
           </motion.p>
         </motion.div>
       </div>
