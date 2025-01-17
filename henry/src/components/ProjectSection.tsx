@@ -1,5 +1,3 @@
-import Cow from '../assets/images/cow.jpeg';
-import MD from '../assets/images/md.jpg';
 import Rhino from '../assets/images/rhino.jpg';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
@@ -7,25 +5,25 @@ import { ExternalLink } from 'lucide-react';
 export default function ProjectSection() {  
     const projects = [
       {
-        title: "Steppe Pulse",
+        title: "Steppe Pulse, Kenya",
         description: "An animal adoption system that promotes environmental conservation and tourism growth.",
         tags: ["Typescript", "Motoko", "Rust"],
         image: Rhino,
-        url: "https://github.com/H3nryK/SteppePulse"
+        url: "https://t2avi-nyaaa-aaaaj-qnesa-cai.icp0.io/"
       },
       {
-        title: "Mascular-Dystrophy",
-        description: "A machine learning-based predictive model for individualized exercise response in muscular dystrophy.",
-        tags: ["pandas", "scikit-learn", "numpy", "python"],
-        image: MD,
-        url: "https://github.com/H3nryK/Mascular-Dystrophy"
+        title: "Jetbrains College, Limuru",
+        description: "At Jetbrains Institute of Information Technology, they offer computer & related short courses that equip students with digital and practical skills.",
+        tags: ["html", "javascript", "python"],
+        image: 'https://jetbrainscollege.com/static/assets/images/courses/IMG_3527.webp',
+        url: "https://jetbrainscollege.com/"
       },
       {
-        title: "Dairy Farm Management System",
-        description: "Backend canister for managing dairy farming operations, including adding cows, recording milk production, and retrieving cow data.",
-        tags: ["Rust", "Shell", "Blockchain", "ICP"],
-        image: Cow,
-        url: "https://github.com/H3nryK/dairy"
+        title: "Guild Code, Kenya",
+        description: "Guild Code's suite of services are designed to elevate your business in the digital realm. Explore their featured services that seamlessly blend innovation with practical solutions.",
+        tags: ["html", "javascript", "python"],
+        image: "https://guild-code.com/static/assets/media/project/project-5.png",
+        url: "https://guild-code.com/"
       }
     ];
 

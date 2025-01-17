@@ -139,7 +139,7 @@ export default function HeroSection() {
                   { Icon: FaSquareXTwitter, href: "https://x.com/H3nryKim"},
                   { Icon: SiGmail, href: "mailto:kimanihenryn@gmail.com"},
                   { Icon: FaDiscord, href: "https://discord.com/channels/@kimani_henry"},
-                  { Icon: FaTelegram, href: "mailto:kimanihenryn@gmail.com"}
+                  { Icon: FaTelegram, href: "https://t.me/henry_kimani"}
                 ].map(({ Icon, href }) => (
                   <motion.a
                     key={href}

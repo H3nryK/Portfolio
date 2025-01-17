@@ -13,7 +13,7 @@ const Footer = () => {
     { icon: <FaInstagram className="w-5 h-5" />, label: "Instagram", href: "https://www.instagram.com/_.h3nry_k/" },
     { icon: <FaWhatsapp className="w-5 h-5" />, label: "Whatsapp", href: "https://wa.me/+254705618424" },
     { icon: <FaDiscord className="w-5 h-5" />, label: "Discord", href: "https://discord.com/channels/@kimani_henry" },
-    { icon: <FaTelegram className="w-5 h-5" />, label: "Telegram", href: "https://wa.me/+254705618424" }
+    { icon: <FaTelegram className="w-5 h-5" />, label: "Telegram", href: "https://t.me/henry_kimani" }
   ];
 
   return (
